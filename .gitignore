@@ -1,0 +1,9 @@
+# OS files
+.DS_Store
+# Visual Studio Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+# build path
+build/
