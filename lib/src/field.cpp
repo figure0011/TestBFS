@@ -59,7 +59,7 @@ void Field::bfsSolve(){
             if (path.size() != 1)
             {
                 QGraphicsLineItem *line = new QGraphicsLineItem(cellSize * path.at(path.size() - 1)->getX() + 25, cellSize * path.at(path.size() - 1)->getY() + 25,
-                                                                cellSize * path.at(path.size() - 2)->getX() + 25, cellSize * path.at(path.size() - 2)->getY() + 25, L);
+                                                                cellSize * path.at(path.size() - 2)->getX() + 25, cellSize * path.at(path.size() - 2)->getY() + 25, nullptr);
                 line->setPen(QPen(QColor(Qt::green), 5, Qt::SolidLine));
                 scene()->addItem(line);
                 lines.push_back(line);

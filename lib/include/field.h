@@ -29,7 +29,6 @@ private:
     bool finish;
 
     vector<vector<Cell*>> maze;
-    QGraphicsLineItem *L;
     Cell *startCell;
     Cell *finishCell;
     BFS* bfs;
