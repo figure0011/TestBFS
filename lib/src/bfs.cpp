@@ -56,9 +56,11 @@ vector<Cell*> BFS::getPath(Cell *startCell, Cell *finishCell){
     path1.push_back(cell);
 
     while(cell != startCell){
+
         cell = path.at(cell->getX()).at(cell->getY());
         path1.push_back(cell);
     }
+
     std::reverse(path1.begin(), path1.end());
     return path1;
 }

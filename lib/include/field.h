@@ -24,7 +24,7 @@ public:
     void wheelEvent(QWheelEvent* event);
 
 private:
-    int weight, height;
+    int width, height;
     bool start;
     bool finish;
 

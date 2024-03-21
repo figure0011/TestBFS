@@ -1,11 +1,11 @@
 #include "field.h"
 
 Field::Field(int w, int h, QWidget *parent)
-    : QGraphicsView{parent}, weight{w}, height{h}
+    : QGraphicsView{parent}, width{w}, height{h}
 {
     QGraphicsScene *sc = new QGraphicsScene(this);
-    setGeometry(0, 0, weight, height);
-    sc->setSceneRect(0, 0, weight, height);
+    setGeometry(0, 0, width, height);
+    sc->setSceneRect(0, 0, width, height);
     setScene(sc);
 
     start = false;
@@ -20,12 +20,12 @@ void Field::genrateBarrier(){
 
     int xi, yi;
     Cell *currCell;
-    int ww = weight/ cellSize;
+    int ww = width/ cellSize;
     int hh = height/cellSize;
 
     for (int i = 0; i < (ww*hh)/2; ++i)
     {
-        xi = QRandomGenerator::global()->bounded(weight);
+        xi = QRandomGenerator::global()->bounded(width);
         yi = QRandomGenerator::global()->bounded(height);
 
         currCell = static_cast<Cell*>(scene()->itemAt(xi, yi, QTransform()));
